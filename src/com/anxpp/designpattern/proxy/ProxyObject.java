@@ -1,7 +1,11 @@
 package com.anxpp.designpattern.proxy;
 //代理对象
 public class ProxyObject implements AbstractObject {
-	AbstractObject object = new TargetObject();
+	AbstractObject object;
+	public ProxyObject(AbstractObject object){
+		this.object=object;
+	}
+	//AbstractObject object = new TargetObject();
 	@Override
 	public void method1() {
 		object.method1();
